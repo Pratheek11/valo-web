@@ -1,0 +1,462 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#000, #000);
+    border-radius: 5px;
+}
+#progress-bar{
+    top: 9vh;
+    left: 0;
+    height: 3px;
+    position: fixed;
+    background: #D61A3C;
+}
+.landing {
+    background: url(./Valorant-a.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+.big-text{
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+.slider {
+    background-color: #fff4eb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(100%);
+}
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 9vh;
+    background-color: #fff4eb;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 33;
+}
+.logo {
+    background: url('./logo.svg');
+    width: 55px;
+    height: 55px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+.nav-links li a  {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    height: 100%;
+}
+.active{
+    border-bottom: 2px solid black;
+}
+.burger {
+    display: none;
+}
+
+
+
+.toggle .line-1 {
+    transform: rotate(-45deg) translate(-1px, 6px);
+}
+.toggle .line-2 {
+    opacity: 0;
+}
+.toggle .line-3 {
+    transform: rotate(45deg) translate(-1px, -6px);
+}
+
+.intro {
+    background-color: #D61A3C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intro-text {
+    color: rgb(216, 215, 215);
+    font-size: 65px;
+}
+
+.hide {
+    background: #D61A3C;
+    overflow: hidden;
+}
+.hide span {
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+.agents,
+.guns {
+    width: 100%;
+    height: 100vh;
+    background: #fff4eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px 5px rgb(87, 87, 87);
+}
+.agents-container,
+.guns-container {
+     width: 90%;
+     height: 80vh;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+}
+
+.agents-container > h1,
+.guns-container> h1 {
+    font-size: 35px;
+    pointer-events: none;
+    margin: 10px 0 30px 0;
+}
+.agents-img {
+    background-image: url(./img/Agent_Viper_Half.png);
+    height: 120px;
+    width: 80px;
+    animation: agents 50s infinite ease-in-out;
+}
+
+@keyframes agents {
+    0% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Brimstone_Half.png);
+    }
+    8.4% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Cypher_Half.png);
+    }
+    16.8% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Jett_Half.png);
+    }
+    25.2% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Killjoy_Half.png);
+    }
+    33.6% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Omen_Half.png);
+    }
+    42% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Phoenix_Half.png);
+    }
+    50.4% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Raze_Half.png);
+    }
+    58.8% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Reyna_Half.png);
+    }
+    67.2% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Sage_Half.png);
+    }
+    75.6% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Sova_Half.png);
+    }
+    84% {
+        height: 120px;
+        width: 80px;
+        background-image: url(./img/Agent_Viper_Half.png);
+    }
+}
+
+
+.maps {
+    width: 100%;
+    height: 90vh;
+    background: #fff4eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+.maps > h1 {
+    font-size: 35px;
+}
+.map {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.maps-img {
+    width: 400%;
+    display: flex;
+}
+.maps-img > input {
+    display: none;
+}
+.image {
+    width: 25%;
+    transition: 2s;
+}
+.manual {
+    position: absolute;
+    top: 600px;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.man-btn {
+    border: 2px solid #fff;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.man-btn:not(:last-child) {
+    margin-right: 40px;
+}
+.man-btn:hover {
+    background: #fff;
+}
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+.auto {
+    position: absolute;
+    top: 600px;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.auto > div {
+    border: 2px solid #fff;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.auto > div:not(:last-child) {
+    margin-right: 40px;
+}
+#radio1:checked ~ .auto .auto-btn1 {
+    background: #fff;
+}
+#radio2:checked ~ .auto .auto-btn2 {
+    background: #fff;
+}
+#radio3:checked ~ .auto .auto-btn3 {
+    background: #fff;
+}
+#radio4:checked ~ .auto .auto-btn4 {
+    background: #fff;
+}
+
+@media screen and (max-width: 1080px) {
+    .nav-links { width: 50%;}
+    .guns-img > img {
+        width: 100%;
+        margin: auto;
+    }
+    .agents {
+        height: 50vh;
+    }
+    .agents-container {
+     width: 90%;
+     height: 40vh;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+}
+}
+
+@media screen and (max-width: 840px) {
+    .agents {
+        height: 50vh;
+    }
+    .guns-img > img {
+        width: 100%;
+        margin: auto;
+    }
+    .map {
+        width: 600px;
+        height: 400px;
+    }
+    .maps-img {
+        width: 400%;
+    }
+    .image > img {
+        width: 600px;
+        height: 400px;
+    }
+    .auto {
+        position: absolute;
+        top: 550px;
+        width: 600px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+    .manual {
+        position: absolute;
+        top: 550px;
+        width: 600px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+@media screen and (max-width: 680px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    .intro-text {
+        font-size: 35px;
+    }
+    .landing {
+        background-position: center;
+        background-size: cover;
+    }
+    .guns,
+    .agents {
+        height: 50vh;
+    }
+    .nav-links {
+        position: absolute;
+        top: 9vh;
+        right: 0;
+        background-color:  #fff4eb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90vh;
+        transform: translateX(100%);
+        transition: all 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 25%;
+        cursor: pointer;
+    }  
+    .burger div {
+        background-color: black;
+        width: 25px;
+        height: 3px;
+        transition: all 0.5s ease;
+    }
+    .guns-img > img {
+        width: 100%;
+        margin: auto;
+    }
+    .map {
+        width: 400px;
+        height: 300px;
+    }
+    .maps-img {
+        width: 400%;
+    }
+    .image > img {
+        width: 500px;
+        height: 300px;
+    }
+    .auto {
+        position: absolute;
+        top: 550px;
+        width: 400px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+    .manual {
+        position: absolute;
+        top: 550px;
+        width: 400px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.nav-toggle {
+    transform: translateX(0%);
+}
+
+@keyframes navFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(50px);
+    } to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
